@@ -497,7 +497,7 @@ pgh_tuple_deform(const pgh_tupdesc *d, const uint8_t *tup, uint32_t tuplen,
  *                holds its block (row's pointers point into it),
  *                next_item is the line pointer after the one returned,
  *                blk is unchanged.
- *   returned 0   blk == blk_end and page_loaded == 0: the range is used
+ *   returned 0   blk >= blk_end and page_loaded == 0: the range is used
  *                up.  Calling again returns 0 again.
  *   returned -1  one of the functions called failed.  The handle is not
  *                used again after -1.
